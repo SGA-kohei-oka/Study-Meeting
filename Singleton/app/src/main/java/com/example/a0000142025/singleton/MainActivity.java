@@ -16,9 +16,11 @@ public class MainActivity extends Activity {
         Singleton obj1 = Singleton.getInstance();
         Singleton obj2 = Singleton.getInstance();
         //値の代入テスト
-        obj1.testNum = 1;
-        obj2.testNum = 2;
-        System.out.println("obj1.testNum = " + String.valueOf(obj1.testNum));
+        System.out.println("obj1.testNum = " + String.valueOf(obj1.getNextTestNum()));
+        System.out.println("obj2.testNum = " + String.valueOf(obj2.getNextTestNum()));
+        System.out.println("obj1.testNum = " + String.valueOf(obj1.getNextTestNum()));
+        System.out.println("obj2.testNum = " + String.valueOf(obj2.getNextTestNum()));
+
     }
 
     @Override

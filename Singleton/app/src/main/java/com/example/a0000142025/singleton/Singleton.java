@@ -7,10 +7,7 @@ import android.view.ScaleGestureDetector;
  */
 public class Singleton {
     private static Singleton singleton = new Singleton();
-    /**
-     * テスト用の数値
-     */
-    public int testNum = 0;
+    private int testNum = 0;
 
     private Singleton() {
         System.out.println("一回きりのインスタンス生成");
@@ -22,6 +19,14 @@ public class Singleton {
      */
     public static Singleton getInstance() {
         return singleton;
+    }
+
+    /**
+     * 次のテスト用数値を取得するゲッタメソッド
+     * @return テスト用の数値
+     */
+    public int getNextTestNum() {
+        return testNum++;
     }
 
 }
